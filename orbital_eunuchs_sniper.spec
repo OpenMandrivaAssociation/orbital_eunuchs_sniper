@@ -15,7 +15,7 @@ Patch0:		orbital_eunuchs_sniper-pointer_size.patch
 License:	BSD
 Group:		Games/Arcade
 Summary:	%{Summary}
-BuildRequires:	SDL_image-devel XFree86-devel jpeg-devel oggvorbis-devel png-devel
+BuildRequires:	SDL_image-devel X11-devel jpeg-devel oggvorbis-devel png-devel
 BuildRequires:	nas-devel SDL_mixer-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
