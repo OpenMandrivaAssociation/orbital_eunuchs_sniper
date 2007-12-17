@@ -17,7 +17,6 @@ Group:		Games/Arcade
 Summary:	%{Summary}
 BuildRequires:	SDL_image-devel X11-devel jpeg-devel oggvorbis-devel png-devel
 BuildRequires:	nas-devel SDL_mixer-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Orbital Eunuchs Sniper is a simple game in which the player
