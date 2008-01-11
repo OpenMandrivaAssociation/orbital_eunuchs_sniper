@@ -45,15 +45,6 @@ or else you may be 'retired'.
 #(peroyvind) move ark-config to %{_bindir} as this belongs to the devel package
 %{__install} -d $RPM_BUILD_ROOT{%{_bindir},%{_gamesdatadir}}
 
-%{__install} -d $RPM_BUILD_ROOT%{_menudir}
-%{__cat} <<EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="%{_gamesbindir}/snipe2d" \
-		icon=%{name}.png \
-		needs="x11" \
-		section="More Applications/Games/Arcade" \
-		title="%{Summary}" \
-		longtitle="%{Summary}" xdg="true"
-EOF
 install -m 755 -d $RPM_BUILD_ROOT%{_datadir}/applications/
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -99,7 +90,6 @@ EOF
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
-%{_menudir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
 %defattr(755,root,root,755)
 %{_gamesbindir}/*
