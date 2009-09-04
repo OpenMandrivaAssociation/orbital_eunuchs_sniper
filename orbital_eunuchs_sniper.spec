@@ -1,6 +1,6 @@
 %define	name	orbital_eunuchs_sniper
 %define	version	1.28
-%define release	%mkrel 8
+%define release	%mkrel 9
 %define	Summary	Orbital Eunuchs Sniper
 
 Name:		%{name}
