@@ -1,11 +1,11 @@
 %define	name	orbital_eunuchs_sniper
 %define	version	1.28
-%define release	11
+%define rel	12
 %define	Summary	Orbital Eunuchs Sniper
 
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel %{release}
+Release:	%mkrel %rel
 URL:		http://www.icculus.org/oes/
 Source0:	%{name}-%{version}.tar.bz2
 Source11:	%{name}-16x16.png
@@ -15,8 +15,9 @@ Patch0:		orbital_eunuchs_sniper-pointer_size.patch
 License:	BSD
 Group:		Games/Arcade
 Summary:	%{Summary}
-BuildRequires:	SDL_image-devel X11-devel jpeg-devel oggvorbis-devel png-devel
-BuildRequires:	nas-devel SDL_mixer-devel
+BuildRequires:	SDL-devel
+BuildRequires:	SDL_image-devel
+BuildRequires:	SDL_mixer-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -33,14 +34,15 @@ or else you may be 'retired'.
 %build
 %configure2_5x	--bindir=%{_gamesbindir} \
 		--datadir=%{_gamesdatadir} \
+		--with-games-dir=%{_gamesdatadir} \
 		--with-pic \
 		--with-gnu-ld \
 		--disable-debug
-%make CXXFLAGS="$RPM_OPT_FLAGS"
+%make
 
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
-%{makeinstall} bindir=$RPM_BUILD_ROOT%{_gamesbindir} datadir=$RPM_BUILD_ROOT%{_gamesdatadir}
+%{makeinstall_std}
 
 #(peroyvind) move ark-config to %{_bindir} as this belongs to the devel package
 %{__install} -d $RPM_BUILD_ROOT{%{_bindir},%{_gamesdatadir}}
@@ -55,7 +57,7 @@ Icon=%name
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=X-MandrivaLinux-MoreApplications-Games-Arcade;Game;ArcadeGame;
+Categories=Game;ArcadeGame;
 EOF
 
 
