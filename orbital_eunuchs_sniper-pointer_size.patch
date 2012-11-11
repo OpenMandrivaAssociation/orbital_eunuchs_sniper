@@ -1,0 +1,24 @@
+--- src/target.cpp.orig	2003-01-02 18:01:10.000000000 +0100
++++ src/target.cpp	2007-01-06 01:28:01.000000000 +0100
+@@ -186,9 +186,9 @@
+             print(238, row, COLOR_YELLOW, "%20s", "VPB file ID");
+             row += 7;
+             print(238, row, COLOR_YELLOW, "      %03X-%07X/%02X", 
+-                        ((((unsigned int)gSightedCharacter) * 7001337) & 0xfff),
+-                        (((unsigned int)gSightedCharacter) * 1337357) & 0xfffffff,
+-                        (((unsigned int)gSightedCharacter) * 70741)  & 0xff);
++                        ((((uintptr_t)gSightedCharacter) * 7001337) & 0xfff),
++                        (((uintptr_t)gSightedCharacter) * 1337357) & 0xfffffff,
++                        (((uintptr_t)gSightedCharacter) * 70741)  & 0xff);
+ 
+ 
+             break;
+@@ -217,7 +217,7 @@
+             row += 7;
+             print(238, row, COLOR_YELLOW, "%20s", "Net worth");
+             row += 7;
+-            print(238, row, COLOR_YELLOW, "%17u KC", (((unsigned int)gSightedCharacter) * 1337357) % 71937);
++            print(238, row, COLOR_YELLOW, "%17u KC", (((uintptr_t)gSightedCharacter) * 1337357) % 71937);
+             break;
+         case 3:
+             print(238, row, COLOR_YELLOW, "%20s", "Splat.");
