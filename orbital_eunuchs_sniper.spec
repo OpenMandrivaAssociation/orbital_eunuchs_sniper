@@ -101,3 +101,61 @@ EOF
 %{_gamesbindir}/*
 
 
+
+
+%changelog
+* Mon Feb 07 2011 Funda Wang <fwang@mandriva.org> 1.28-12mdv2011.0
++ Revision: 636505
+- tighten BR
+
+* Tue Dec 07 2010 Oden Eriksson <oeriksson@mandriva.com> 1.28-11mdv2011.0
++ Revision: 613544
+- rebuild
+
+* Thu Feb 25 2010 Tomasz Pawel Gajc <tpg@mandriva.org> 1.28-10mdv2010.1
++ Revision: 510843
+- fix release tag
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.28-9mdv2010.0mdv2010.0
++ Revision: 430220
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 1.28-8mdv2009.0mdv2009.0
++ Revision: 254913
+- rebuild
+- drop old menu
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Thu Jan 03 2008 Olivier Blin <oblin@mandriva.com> 1.28-6mdv2008.1mdv2008.1
++ Revision: 141036
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - buildrequires X11-devel instead of XFree86-devel
+    - kill desktop-file-validate's 'warning: key "Encoding" in group "Desktop Entry" is deprecated'
+
+
+* Sat Jan 06 2007 Pascal Terjan <pterjan@mandriva.org> 1.28-6mdv2007.0mdv2007.0
++ Revision: 104684
+- add patch to handle non 32 bits pointers and re-enable x86_64
+
+  + Götz Waschk <waschk@mandriva.org>
+    - don't build on x86_64
+    - Import orbital_eunuchs_sniper
+
+* Fri Jan 05 2007 Götz Waschk <waschk@mandriva.org> 1.28-5mdv2007.1mdv2007.1
+- xdg menu
+
+* Fri Dec 23 2005 Per Øyvind Karlsen <pkarlsen@mandriva.com> 1.28-5mdk
+- %%rebuild
+- %%mkrel
+
+* Fri Aug 27 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.28-4mdk
+- rebuild for new menu
+
+* Wed Jun 09 2004 Götz Waschk <waschk@linux-mandrake.com> 1.28-3mdk
+- rebuild for new g++
+
