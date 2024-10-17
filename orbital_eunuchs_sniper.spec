@@ -6,7 +6,7 @@
 Name:		%{name}
 Version:	%{version}
 Release:	%mkrel %rel
-URL:		http://www.icculus.org/oes/
+URL:		https://www.icculus.org/oes/
 Source0:	%{name}-%{version}.tar.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
