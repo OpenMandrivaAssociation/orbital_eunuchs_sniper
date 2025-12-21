@@ -15,6 +15,11 @@ Patch0:		orbital_eunuchs_sniper-pointer_size.patch
 License:	BSD
 Group:		Games/Arcade
 Summary:	%{Summary}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
